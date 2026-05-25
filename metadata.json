@@ -1,0 +1,6 @@
+{
+  "name": "تهنئة عيد الأضحى المبارك",
+  "description": "منصة تهنئة وتكبيرات عيد الأضحى المبارك بتصميم عربي إسلامي فاخر وألوان زمردية وذهبية راقية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

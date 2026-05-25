@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Cairo', 'Tajawal', system-ui, sans-serif;
+  --font-tajawal: 'Tajawal', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --color-gold-50: #fefdf0;
+  --color-gold-100: #fbf6cd;
+  --color-gold-200: #faf1af;
+  --color-gold-300: #f6e37e;
+  --color-gold-400: #f3d455;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #bc982e;
+  --color-gold-700: #937220;
+  --color-gold-800: #74571b;
+  --color-gold-900: #5f4518;
+}
+
+@layer base {
+  body {
+    background-color: #170410;
+    color: #fff0f5;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #10010a;
+}
+::-webkit-scrollbar-thumb {
+  background: #e27d97;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffb7c5;
+}
+
+/* Glassmorphism Classes */
+.glass-container {
+  background: rgba(23, 4, 16, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 182, 193, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+}
+
+.glass-card-gold {
+  background: rgba(255, 182, 193, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 125, 151, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(226, 125, 151, 0.08);
+}
+
+/* Shining Gold Shimmer Effect */
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 30%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 30%,
+    rgba(255, 215, 0, 0.2) 60%,
+    transparent 100%
+  );
+  transform: rotate(30deg);
+  animation: shineLoop 4s infinite ease-in-out;
+}
+
+@keyframes shineLoop {
+  0% {
+    left: -70%;
+  }
+  15% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+/* Glitter / Twinkle Keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+.twinkle-star {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
