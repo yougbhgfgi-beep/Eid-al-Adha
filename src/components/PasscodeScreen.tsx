@@ -95,7 +95,7 @@ export default function PasscodeScreen({ onUnlock }: PasscodeScreenProps) {
               مساحة الحب المغلقة للحبيب الغالي 🔐✨
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-sans tracking-wide leading-tight mb-3">
-              أهلاً بك في عالم دلالي 🥰
+              أهلاً بك في عالم بصمة 🥰
             </h2>
             <p className="text-pink-100/70 text-sm font-tajawal leading-relaxed mb-8 max-w-sm">
               هذه المعايدة السعيدة صُمّمت بنبضات الوفاء والدفء لتليق بقلبك.. أدخل كلمة سر العشق للدخول والتأمل 🌸
